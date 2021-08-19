@@ -81,9 +81,9 @@ __xelabash_reset_prompt() {
   export __xelabash_PS1_last_exit="$?"
   export __xelabash_PS1_prefix=''
   if ! __xelabash_is_apple_terminal; then
-    __xelabash_PS1_prefix='\[\e]0;\w\a\]'
+    __xelabash_PS1_prefix='\[\e]0;\W\a\]'
   fi
-  export __xelabash_PS1_content='\[\e[1m\]\w\[\e[0m\]'
+  export __xelabash_PS1_content='\[\e[1m\]\W\[\e[0m\]'
   export __xelabash_PS1_suffix=' \$ '
 }
 
