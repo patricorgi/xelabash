@@ -130,8 +130,10 @@ __xelabash_add_kube_to_prompt() {
 # prepend user@hostname to prompt, if connected via ssh
 __xelabash_add_ssh_to_prompt() {
   if [ -n "$SSH_CONNECTION" ]; then
-    __xelabash_PS1_prefix='\[\e]0;\u@\h \w\a\]'
-    __xelabash_PS1_content="\[\e[2m\]\u@\h\[\e[0m\] ${__xelabash_PS1_content}"
+    # __xelabash_PS1_prefix='\[\e]0;\u@\h \w\a\]'
+    # __xelabash_PS1_content="\[\e[2m\]\u@\h\[\e[0m\] ${__xelabash_PS1_content}"
+    __xelabash_PS1_prefix='\[\e]0;\w\a\]'
+    __xelabash_PS1_content="${__xelabash_PS1_content}"
   fi
 }
 
